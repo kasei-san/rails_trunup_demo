@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+1.upto(100) do |i|
+  category = Category.create(name: "category_#{i}")
+
+  1.upto(100) do |j|
+    category.items << Item.create(name: "item_#{i}_#{j}")
+  end
+end
+
